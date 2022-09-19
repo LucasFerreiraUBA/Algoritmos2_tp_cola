@@ -1,5 +1,7 @@
 package cola
 
+import "fmt"
+
 type nodoCola[T any] struct {
 	dato T
 	prox *nodoCola[T]
@@ -38,6 +40,7 @@ func (cola *colaEnlazada[T]) Desencolar() T {
 	if cola.primero == nil {
 		cola.ultimo = nil
 	}
+	fmt.Println(dato)
 	return dato
 }
 
